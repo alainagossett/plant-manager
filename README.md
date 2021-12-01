@@ -1,6 +1,6 @@
 # Plant Manager
 
-A simple CRUD app for managing houseplants.
+Are you an avid houseplant collector? Do you find it difficult sometimes to remember all your plants' names, their watering schedules, or other basic pieces of information about them? Behold! The Plant Manager - a simple CRUD app designed to help you maintain your indoor oasis.
 
 ## Technologies Used
 - HTML 5
