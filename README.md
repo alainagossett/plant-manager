@@ -14,8 +14,8 @@ A simple CRUD app for managing houseplants.
 
 ## Screenshots
 ### Wireframes
-[wireframe image1]()
-[wireframe image2]()
+[wireframe image1]()  
+[wireframe image2]()  
 [wireframe image3]()
 
 ### Deployed App
