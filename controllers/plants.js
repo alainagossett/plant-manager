@@ -54,4 +54,21 @@ plantsRouter.get('/plants/manager', (req, res) => {
     })
 })
 
+//New Route
+
+//Delete Route
+
+//Update Route
+
+//Create Route
+
+//Show Route
+plantsRouter.get("/plants/:id", (req, res) => {
+    Plant.findById(req.params.id, (error, plant) => {
+        res.render("show.ejs", {
+            plant,
+        })
+    })
+})
+
 module.exports = plantsRouter;
