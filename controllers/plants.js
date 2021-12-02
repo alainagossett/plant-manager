@@ -64,6 +64,11 @@ plantsRouter.get('/plants/propagate', (req, res) => {
 //Update Route
 
 //Create Route
+plantsRouter.post('/plants', (req, res) => {
+    Plant.create(req.body, (err, createdPlant) => {
+        res.redirect('/plants/manager')
+    })
+})
 
 //Show Route
 plantsRouter.get('/plants/:id', (req, res) => {
