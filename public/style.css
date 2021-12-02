@@ -59,8 +59,44 @@ main.land {
 /****************************************************/
 /********************INDEX.EJS************************/
 /****************************************************/
+header.index {
+    justify-content: space-between;
+    width: 100%;
+}
 
-.index-img {
+h1.index {
+    font-size: 30pt;
+}
+
+body.index {
+    background-color: #4bb6a8;
+}
+
+main.index {
+    padding-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+div.index {
+    background-color: #FCD9D3;
     height: 300px;
-    width: 300px;
+    width: 250px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: .3rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    border: 2px solid #fff;
+}
+
+img.index {
+    height: 200px;
+    width: 200px;
+}
+
+.index-name {
+    font-weight: bold;
 }

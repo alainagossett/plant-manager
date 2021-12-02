@@ -11,16 +11,16 @@
     <title>Plant Manager</title>
 </head>
 
-<body>
-        <h1>Welcome to the Plant Manager</h1>
-    <nav>
-        <a href="/plants/propagate">Add a New Plant</a>
-    </nav>
-    <main>
+<body class="index">
+        <header class="index">
+            <h1 class="index">Welcome to the Plant Manager</h1>
+            <a href="/plants/propagate">Add a New Plant</a>
+        </header>
+    <main class="index">
         <% plants.forEach(plant => { %>
-            <div class="index-card">
-                <p class="name"><%= plant.name %></p>
-                <a href="/plants/<%= plant.id %>"><img src="<%= plant.img %>" class="index-img"/></a>
+            <div class="index">
+                <p class="index-name"><%= plant.name %></p>
+                <a href="/plants/<%= plant.id %>"><img src="<%= plant.img %>" class="index"/></a>
             </div>
       <%  }) %>
     </main>
