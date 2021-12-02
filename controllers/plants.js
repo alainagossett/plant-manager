@@ -2,13 +2,43 @@
 const express = require('express');
 const plantsRouter = express.Router();
 
-// const Plant = require('../modles/plant');
+const Plant = require('../models/plant');
 
 //Define Routes
 plantsRouter.get('/', (req, res) => {
     res.send("Hello World");
 })
 
+//Seed Route
+plantsRouter.get('/plants/seed', async (req, res) => {
+    const data = [{
+            name: "Monstera Deliciosa",
+            img: "https://i.imgur.com/8iZWJdu.jpeg",
+            description: "Famous for their natural leaf-holes, this popular plant is fondly nicknamed the Swiss Cheese Plant.",
+            sunlight: "Bright to medium indirect light",
+            water: "Every 1-2 weeks, depending on light level",
+            problems: "Fungus flies, root rot, underwatering"
+        },
+        {
+            name: "Golden Pothos",
+            img: "https://i.imgur.com/z5IyOil.jpeg",
+            description: "Known for being one of the easiest houseplants to care for, this trailing plant comes in many delightful varieties.",
+            sunlight: "Bright to low light",
+            water: "Every 1-2 weeks, depending on light level",
+            problems: "Underwatering, overwatering"
+        },
+        {
+            name: "Zamioculcas Zamiifolia",
+            img: "https://i.imgur.com/o6uMVMf.jpeg",
+            description: "A highly dependable houseplant, ZZ Plants are great starter plants due to their tolerance for neglect.",
+            sunlight: "Medium to low indirect light",
+            water: "Every 2-3 weeks, depending on light level",
+            problems: "Root rot, overwatering"
+        },
+    ];
+    await Plant.create(data)
+    res.redirect('/root');
+})
 
 
 

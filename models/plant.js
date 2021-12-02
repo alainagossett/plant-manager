@@ -6,10 +6,11 @@ const Schema = mongoose.Schema;
 //Define Schema
 const plantSchema = new Schema({
     name: { type: String, required: true },
-    colors: String,
+    img: String,
+    description: String,
     sunlight: String,
     water: String,
-    pests: String
+    problems: String
 }, { timestamps: true });
 
 //Compile mongoose Schema into a model
