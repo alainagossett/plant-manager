@@ -14,6 +14,10 @@ main {
     flex-grow: 1;
 }
 
+nav {
+    justify-content: space-between;
+}
+
 
 /****************************************************/
 /********************LAND.EJS************************/
@@ -133,4 +137,49 @@ h1.show {
     font-size: 14pt;
     max-width: 500px;
     margin: 50px;
+}
+
+/****************************************************/
+/********************NEW.EJS************************/
+/****************************************************/
+body.new {
+    background-image: url("https://i.imgur.com/GBpUyDz.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+div.new {
+    display: flex;
+    justify-content: center;
+}
+
+h1.new {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+div.new-plant {
+    margin: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.6;
+    background-color: #EFEDF0;
+    height: 300px;
+    width: 400px;
+    border-radius: 10px;
+
+}
+
+input {
+    float: right;
+    margin: 10px 0px 2px 20px;
+}
+
+.add-btn {
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    width: 100px;
 }
