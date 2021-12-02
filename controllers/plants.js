@@ -9,6 +9,11 @@ plantsRouter.get('/', (req, res) => {
     res.send("Hello World");
 })
 
+//Landing Page
+plantsRouter.get('/plants/root', (req, res) => {
+    res.render('land.ejs');
+})
+
 //Seed Route
 plantsRouter.get('/plants/seed', async (req, res) => {
     const data = [{
@@ -37,7 +42,7 @@ plantsRouter.get('/plants/seed', async (req, res) => {
         },
     ];
     await Plant.create(data)
-    res.redirect('/root');
+    res.redirect('/plants/root');
 })
 
 
