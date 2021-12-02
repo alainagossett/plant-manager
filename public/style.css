@@ -41,14 +41,26 @@ main.land {
     transform: translate(0, -50%);
 }
 
-.btn {
+.land-btn {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 30px;
-    width: fit-content;
+    width: 150px;
     border: 2px solid #249485;
     box-shadow: 2px 3px 3px #249485;
+    color: black;
     font-size: 14pt;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+/****************************************************/
+/********************INDEX.EJS************************/
+/****************************************************/
+
+.index-img {
+    height: 300px;
+    width: 300px;
 }

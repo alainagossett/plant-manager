@@ -45,6 +45,13 @@ plantsRouter.get('/plants/seed', async (req, res) => {
     res.redirect('/plants/root');
 })
 
-
+//Index Route
+plantsRouter.get('/plants/manager', (req, res) => {
+    Plant.find({}, (error, plants) => {
+        res.render("index.ejs", {
+            plants,
+        })
+    })
+})
 
 module.exports = plantsRouter;
