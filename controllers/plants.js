@@ -48,13 +48,16 @@ plantsRouter.get('/plants/seed', async (req, res) => {
 //Index Route
 plantsRouter.get('/plants/manager', (req, res) => {
     Plant.find({}, (error, plants) => {
-        res.render("index.ejs", {
+        res.render('index.ejs', {
             plants,
         })
     })
 })
 
 //New Route
+plantsRouter.get('/plants/propagate', (req, res) => {
+    res.render('new.ejs')
+})
 
 //Delete Route
 
@@ -63,9 +66,9 @@ plantsRouter.get('/plants/manager', (req, res) => {
 //Create Route
 
 //Show Route
-plantsRouter.get("/plants/:id", (req, res) => {
+plantsRouter.get('/plants/:id', (req, res) => {
     Plant.findById(req.params.id, (error, plant) => {
-        res.render("show.ejs", {
+        res.render('show.ejs', {
             plant,
         })
     })
