@@ -26,6 +26,7 @@ body.land {
     background-image: url("https://i.imgur.com/I5if9UR.jpg");
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
     background-color: #FCD9D3;
 }
 
@@ -74,6 +75,10 @@ h1.index {
 }
 
 body.index {
+    background-image: url("https://i.imgur.com/Q7Fit8I.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     background-color: #4bb6a8;
 }
 
@@ -146,6 +151,7 @@ body.new {
     background-image: url("https://i.imgur.com/GBpUyDz.jpg");
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
 }
 
 div.new {
