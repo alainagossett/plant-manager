@@ -9,15 +9,21 @@
     <link rel="stylesheet" href="/style.css">
     <title>Show Plant Page</title>
 </head>
-<body>
+<body class="show">
     <nav>
         <a href="/plants/manager">Back to the Manager</a>
     </nav>
-    <h1><%= plant.name %></h1>
-    <img src="<%= plant.img %>" />
-    <p><%= plant.description %></p>
-    <p><%= plant.sunlight %></p>
-    <p><%= plant.water %></p>
-    <p><%= plant.problems %></p>
+    <div class="show">
+    <h1 class="show"><%= plant.name %></h1>
+    <div class="plant-page">
+    <img class="plant-img" src="<%= plant.img %>" />
+    <div class="plant-det">
+    <p><strong>Description:</strong> <%= plant.description %></p>
+    <p><strong>Sunlight:</strong> <%= plant.sunlight %></p>
+    <p><strong>Water:</strong> <%= plant.water %></p>
+    <p><strong>Common Issues:</strong> <%= plant.problems %></p>
+</div>
+</div>
+</div>
 </body>
 </html>

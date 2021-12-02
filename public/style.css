@@ -60,6 +60,7 @@ main.land {
 /********************INDEX.EJS************************/
 /****************************************************/
 header.index {
+    display: flex;
     justify-content: space-between;
     width: 100%;
 }
@@ -99,4 +100,37 @@ img.index {
 
 .index-name {
     font-weight: bold;
+}
+
+/****************************************************/
+/********************SHOW.EJS************************/
+/****************************************************/
+body.show {
+    background-color: #FCD9D3;
+}
+
+div.show {
+    justify-content: center;
+}
+
+h1.show {
+    text-align: center;
+}
+
+.plant-page {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.plant-img {
+    margin: 50px;
+    max-height: 400px;
+    max-width: 400px;
+}
+
+.plant-det {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 14pt;
+    max-width: 500px;
+    margin: 50px;
 }
