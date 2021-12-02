@@ -13,3 +13,42 @@ body {
 main {
     flex-grow: 1;
 }
+
+
+/****************************************************/
+/********************LAND.EJS************************/
+/****************************************************/
+body.land {
+    background-image: url("https://i.imgur.com/I5if9UR.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #FCD9D3;
+}
+
+h1.land {
+    padding-left: 50px;
+    height: 10em;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+main.land {
+    padding-left: 300px;
+    height: 10em;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: fit-content;
+    border: 2px solid #249485;
+    box-shadow: 2px 3px 3px #249485;
+    font-size: 14pt;
+}
