@@ -62,6 +62,15 @@ plantsRouter.get('/plants/propagate', (req, res) => {
 //Delete Route
 
 //Update Route
+plantsRouter.put('/plants/:id', (req, res) => {
+    Plant.findByIdAndUpdate (
+        req.params.id, req.body,
+        { new: true },
+        (err, updatedPlant) => {
+            res.redirect(`/plants/${req.params.id}`)
+        }
+    )
+})
 
 //Create Route
 plantsRouter.post('/plants', (req, res) => {
