@@ -70,6 +70,15 @@ plantsRouter.post('/plants', (req, res) => {
     })
 })
 
+//Edit Route
+plantsRouter.get('/plants/:id/edit', (req, res) => {
+    Plant.findById(req.params.id, (err, plant) => {
+        res.render('edit.ejs', {
+            plant,
+        })
+    })
+})
+
 //Show Route
 plantsRouter.get('/plants/:id', (req, res) => {
     Plant.findById(req.params.id, (error, plant) => {
