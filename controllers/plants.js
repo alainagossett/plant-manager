@@ -60,6 +60,11 @@ plantsRouter.get('/plants/propagate', (req, res) => {
 })
 
 //Delete Route
+plantsRouter.delete('/plants/:id', (req, res) => {
+    Plant.findByIdAndDelete(req.params.id, (err, data) => {
+        res.redirect('/plants/manager');
+    })
+})
 
 //Update Route
 plantsRouter.put('/plants/:id', (req, res) => {
