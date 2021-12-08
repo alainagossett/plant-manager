@@ -64,14 +64,29 @@ main.land {
 /****************************************************/
 /********************INDEX.EJS************************/
 /****************************************************/
-header.index {
+h1.index {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: 100%;
+    background-color: #EFEDF0;
+    padding: 1rem;
+    align-items: center;
+    
 }
+
+a.index {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
 
 h1.index {
     font-size: 30pt;
+    text-shadow: 3px 3px 2px #fff;
 }
 
 body.index {
