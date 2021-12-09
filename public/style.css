@@ -62,18 +62,8 @@ main.land {
 }
 
 /****************************************************/
-/********************INDEX.EJS************************/
+/******************** HEADER ************************/
 /****************************************************/
-/* h1.index {
-    display: flex;
-    justify-content: space-evenly;
-    width: 100%;
-    background-color: #EFEDF0;
-    padding: 1rem;
-    align-items: center;
-    font-size: 30pt;
-    text-shadow: 3px 3px 2px #fff;
-} */
 
 header {
     margin-bottom: 2em;
@@ -108,15 +98,15 @@ ul {
 li {
     margin: 1em 0;
 }
-/* 
-a.index {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+li a {
     text-decoration: none;
-    color: #000;
-    font-weight: bold;
-} */
+    color: #249485;
+}
+
+/****************************************************/
+/******************** INDEX.EJS ************************/
+/****************************************************/
 
 body.index {
     background-image: url("https://i.imgur.com/Q7Fit8I.jpg");
@@ -156,43 +146,7 @@ img.index {
 }
 
 /****************************************************/
-/********************SHOW.EJS************************/
-/****************************************************/
-body.show {
-    background-image: url("https://i.imgur.com/GBpUyDz.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
-div.show {
-    justify-content: center;
-}
-
-h1.show {
-    text-align: center;
-}
-
-.plant-page {
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.plant-img {
-    margin: 50px;
-    max-height: 400px;
-    max-width: 400px;
-}
-
-.plant-det {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 14pt;
-    max-width: 500px;
-    margin: 50px;
-}
-
-/****************************************************/
-/********************NEW.EJS************************/
+/******************** NEW.EJS ************************/
 /****************************************************/
 body.new {
     background-image: url("https://i.imgur.com/GBpUyDz.jpg");
@@ -238,3 +192,41 @@ input {
     margin-top: 50px;
     width: 100px;
 }
+
+/****************************************************/
+/********************SHOW.EJS************************/
+/****************************************************/
+body.show {
+    background-image: url("https://i.imgur.com/GBpUyDz.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+div.show {
+    justify-content: center;
+}
+
+h1.show {
+    padding: 1em;
+    text-align: center;
+}
+
+.plant-page {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.plant-img {
+    margin: 50px;
+    max-height: 400px;
+    max-width: 400px;
+}
+
+.plant-det {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 14pt;
+    max-width: 500px;
+    margin: 50px;
+}
+
