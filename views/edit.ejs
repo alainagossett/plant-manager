@@ -1,42 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('./partials/head.ejs') %>
+<%- include('./partials/head.ejs') %>
+
 <body class="new">
     <%- include('./partials/header.ejs') %>
     <h1 class="show"><%= plant.name %></h1>
     <div class="new">
-    <div class="new-plant">
-    <form action="/plants/<%= plant._id %>?_method=PUT" method="POST">
-        <table>
-            <tr>
-            <td>Name:</td>
-            <td><input type="text" name="name" value="<%= plant.name %>"/></td>
-            </tr>
-            <tr>
-                <td>Image:</td>
-                <td><input type="text" name="img" value="<%= plant.img %>"/></td>
-            </tr>
-            <tr>
-                <td>Description:</td>
-                <td><input type="text" name="description" value="<%= plant.description %>"/></td>
-            </tr>
-            <tr>
-                <td>Sunlight Needs:</td>
-                <td><input type="text" name="sunlight" value="<%= plant.sunlight %>"/> </td>
-            </tr>
-            <tr>
-                <td>Watering Needs:</td>
-                <td><input type="text" name="water" value="<%= plant.water %>"/></td>
-            </tr>
-            <tr>
-                <td>Common Problems:</td>
-                <td><input type="text" name="problems" value="<%= plant.problems %>"/> </td>
-            </tr>
-        </table>
-        <input type="submit" value="Submit Changes" class="btn"/>
-    </form>
-</div>
-</div>
-<%- include('./partials/footer.ejs') %>
+        <div class="new-plant">
+            <form action="/plants/<%= plant._id %>?_method=PUT" method="POST">
+                <table>
+                    <tr>
+                        <td>Name:</td>
+                        <td><input type="text" name="name" value="<%= plant.name %>" /></td>
+                    </tr>
+                    <tr>
+                        <td>Image:</td>
+                        <td><input type="text" name="img" value="<%= plant.img %>" /></td>
+                    </tr>
+                    <tr>
+                        <td>Description:</td>
+                        <td><input type="text" name="description" value="<%= plant.description %>" /></td>
+                    </tr>
+                    <tr>
+                        <td>Sunlight Needs:</td>
+                        <td><input type="text" name="sunlight" value="<%= plant.sunlight %>" /> </td>
+                    </tr>
+                    <tr>
+                        <td>Watering Needs:</td>
+                        <td><input type="text" name="water" value="<%= plant.water %>" /></td>
+                    </tr>
+                    <tr>
+                        <td>Common Problems:</td>
+                        <td><input type="text" name="problems" value="<%= plant.problems %>" /> </td>
+                    </tr>
+                </table>
+                <input type="submit" value="Submit Changes" class="btn" />
+            </form>
+        </div>
+    </div>
+    <%- include('./partials/footer.ejs') %>
 </body>
+
 </html>

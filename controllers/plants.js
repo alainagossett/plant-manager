@@ -11,7 +11,9 @@ plantsRouter.get('/', (req, res) => {
 
 //Landing Page
 plantsRouter.get('/plants/root', (req, res) => {
-    res.render('land.ejs');
+    res.render('land.ejs', {
+        tabTitle: 'Plant Manager Home',
+    });
 })
 
 //Seed Route

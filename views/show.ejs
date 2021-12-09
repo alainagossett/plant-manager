@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('./partials/head.ejs') %>
+<%- include('./partials/head.ejs') %>
+
 <body class="show">
     <%- include('./partials/header.ejs') %>
     <div class="show">
-    <h1 class="show"><%= plant.name %></h1>
-    <div class="plant-page">
-    <img class="plant-img" src="<%= plant.img %>" />
-    <div class="plant-det">
-    <p><strong>Description:</strong> <%= plant.description %></p>
-    <p><strong>Sunlight:</strong> <%= plant.sunlight %></p>
-    <p><strong>Water:</strong> <%= plant.water %></p>
-    <p><strong>Common Issues:</strong> <%= plant.problems %></p>
-    <a href="/plants/<%= plant._id %>/edit" class="btn">Edit Plant</a>
-</div>
-</div>
-</div>
-<%- include('./partials/footer.ejs') %>
+        <h1 class="show"><%= plant.name %></h1>
+        <div class="plant-page">
+            <img class="plant-img" src="<%= plant.img %>" />
+            <div class="plant-det">
+                <p><strong>Description:</strong> <%= plant.description %></p>
+                <p><strong>Sunlight:</strong> <%= plant.sunlight %></p>
+                <p><strong>Water:</strong> <%= plant.water %></p>
+                <p><strong>Common Issues:</strong> <%= plant.problems %></p>
+                <a href="/plants/<%= plant._id %>/edit" class="btn">Edit Plant</a>
+            </div>
+        </div>
+    </div>
+    <%- include('./partials/footer.ejs') %>
 </body>
+
 </html>

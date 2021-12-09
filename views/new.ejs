@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('./partials/head.ejs') %>
+<%- include('./partials/head.ejs') %>
+
 <body class="new">
     <header>
         <h1>Plant Manager</h1>
@@ -11,38 +12,39 @@
     </header>
     <h1 class="show">Add a New Plant</h1>
     <div class="new">
-    <div class="new-plant">
-    <form action="/plants" method="POST">
-        <table>
-        <tr>
-        <td>Name:</td>
-        <td><input type="text" name="name" /></td>
-        </tr>
-        <tr>
-            <td>Image:</td>
-            <td><input type="text" name="img" /></td>
-        </tr>
-        <tr>
-            <td>Description:</td>
-            <td><input type="text" name="description" /></td>
-        </tr>
-        <tr>
-            <td>Sunlight Needs:</td>
-            <td><input type="text" name="sunlight" /> </td>
-        </tr>
-        <tr>
-            <td>Watering Needs:</td>
-            <td><input type="text" name="water" /></td>
-        </tr>
-        <tr>
-            <td>Common Problems:</td>
-            <td><input type="text" name="problems" /> </td>
-        </tr>
-    </table>
-        <input type="submit" value="Add Plant" class="btn"/>
-    </form>
-</div>
-</div>
-<%- include('./partials/footer.ejs') %>
+        <div class="new-plant">
+            <form action="/plants" method="POST">
+                <table>
+                    <tr>
+                        <td>Name:</td>
+                        <td><input type="text" name="name" /></td>
+                    </tr>
+                    <tr>
+                        <td>Image:</td>
+                        <td><input type="text" name="img" /></td>
+                    </tr>
+                    <tr>
+                        <td>Description:</td>
+                        <td><input type="text" name="description" /></td>
+                    </tr>
+                    <tr>
+                        <td>Sunlight Needs:</td>
+                        <td><input type="text" name="sunlight" /> </td>
+                    </tr>
+                    <tr>
+                        <td>Watering Needs:</td>
+                        <td><input type="text" name="water" /></td>
+                    </tr>
+                    <tr>
+                        <td>Common Problems:</td>
+                        <td><input type="text" name="problems" /> </td>
+                    </tr>
+                </table>
+                <input type="submit" value="Add Plant" class="btn" />
+            </form>
+        </div>
+    </div>
+    <%- include('./partials/footer.ejs') %>
 </body>
+
 </html>
