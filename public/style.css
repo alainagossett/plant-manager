@@ -39,6 +39,7 @@ nav {
 .btn:hover {
     background-color: #249485;
     color:#EFEDF0;
+    transition: 0.5s;
 }
 
 .delete-btn {

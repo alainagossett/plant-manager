@@ -14,7 +14,7 @@
                 <p><strong>Water:</strong> <%= plant.water %></p>
                 <p><strong>Common Issues:</strong> <%= plant.problems %></p>
                 <div class="options">
-                <a href="/plants/<%= plant._id %>/edit" class="btn">Edit Plant</a>
+                <a href="/plants/<%= plant._id %>/edit" class="btn">Edit</a>
                 <form action="/plants/<%=plant.id %>?_method=DELETE" method="POST">
                     <input class="btn delete-btn" type="submit" value="Delete">
                 </form>
