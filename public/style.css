@@ -36,6 +36,11 @@ nav {
     text-decoration: none;
 }
 
+.btn:hover {
+    background-color: #249485;
+    color:#EFEDF0;
+}
+
 .delete-btn {
     margin: 0;
     margin-left: 20px;
