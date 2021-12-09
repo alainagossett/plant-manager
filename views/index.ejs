@@ -25,7 +25,7 @@
                 <p class="index-name"><%= plant.name %></p>
                 <a href="/plants/<%= plant.id %>"><img src="<%= plant.img %>" class="index"/></a>
             <form action="/plants/<%=plant.id %>?_method=DELETE" method="POST">
-            <input class="land-btn" type="submit" value="Delete">
+            <input class="btn" type="submit" value="Delete">
             </form>
             </div>
       <%  }) %>

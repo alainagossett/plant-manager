@@ -18,9 +18,23 @@ nav {
     justify-content: space-between;
 }
 
+.btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: fit-content;
+    border: 2px solid #249485;
+    box-shadow: 2px 3px 3px #249485;
+    color: black;
+    font-size: 14pt;
+    border-radius: 5px;
+    text-decoration: none;
+}
 
 /****************************************************/
-/********************LAND.EJS************************/
+/******************** LAND.EJS ************************/
 /****************************************************/
 body.land {
     background-image: url("https://i.imgur.com/I5if9UR.jpg");
@@ -44,21 +58,6 @@ main.land {
     position: absolute;
     top: 50%;
     transform: translate(0, -50%);
-}
-
-.land-btn {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 30px;
-    width: 150px;
-    border: 2px solid #249485;
-    box-shadow: 2px 3px 3px #249485;
-    color: black;
-    font-size: 14pt;
-    border-radius: 5px;
-    text-decoration: none;
 }
 
 /****************************************************/
@@ -101,7 +100,11 @@ li {
 
 li a {
     text-decoration: none;
-    color: #249485;
+    color: #249446;
+}
+
+li a:hover {
+    color: #3f6862;
 }
 
 /****************************************************/
@@ -194,7 +197,7 @@ input {
 }
 
 /****************************************************/
-/********************SHOW.EJS************************/
+/******************** SHOW.EJS ************************/
 /****************************************************/
 body.show {
     background-image: url("https://i.imgur.com/GBpUyDz.jpg");
