@@ -152,6 +152,15 @@ img.index {
     font-weight: bold;
 }
 
+/* .options {
+    display: flex;
+    align-items: center;
+} */
+
+.delete-btn {
+    margin: 0;
+    margin-left: 10px;
+}
 
 /****************************************************/
 /******************** NEW/EDIT.EJS ************************/
