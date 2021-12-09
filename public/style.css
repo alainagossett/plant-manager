@@ -171,11 +171,11 @@ div.new {
     font-size: 14pt;
 }
 
-h1.new {
+/* h1.new {
     display: flex;
     text-align: center;
     justify-content: center;
-}
+} */
 
 div.new-plant {
     margin: 5rem;

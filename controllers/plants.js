@@ -50,13 +50,16 @@ plantsRouter.get('/plants/manager', (req, res) => {
     Plant.find({}, (error, plants) => {
         res.render('index.ejs', {
             plants,
+            tabTitle: 'Plant Manager',
         })
     })
 })
 
 //New Route
 plantsRouter.get('/plants/propagate', (req, res) => {
-    res.render('new.ejs')
+    res.render('new.ejs', {
+        tabTitle: 'New Plant Page',
+    })
 })
 
 //Delete Route
@@ -89,6 +92,7 @@ plantsRouter.get('/plants/:id/edit', (req, res) => {
     Plant.findById(req.params.id, (err, plant) => {
         res.render('edit.ejs', {
             plant,
+            tabTitle: 'Edit Plant Page',
         })
     })
 })
@@ -98,6 +102,7 @@ plantsRouter.get('/plants/:id', (req, res) => {
     Plant.findById(req.params.id, (error, plant) => {
         res.render('show.ejs', {
             plant,
+            tabTitle: 'Show Plant Page',
         })
     })
 })
