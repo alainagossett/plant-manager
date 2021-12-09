@@ -13,8 +13,13 @@
                 <p><strong>Sunlight:</strong> <%= plant.sunlight %></p>
                 <p><strong>Water:</strong> <%= plant.water %></p>
                 <p><strong>Common Issues:</strong> <%= plant.problems %></p>
+                <div class="options">
                 <a href="/plants/<%= plant._id %>/edit" class="btn">Edit Plant</a>
+                <form action="/plants/<%=plant.id %>?_method=DELETE" method="POST">
+                    <input class="btn delete-btn" type="submit" value="Delete">
+                </form>
             </div>
+        </div>
         </div>
     </div>
     <%- include('./partials/footer.ejs') %>
