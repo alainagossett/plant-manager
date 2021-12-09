@@ -64,16 +64,51 @@ main.land {
 /****************************************************/
 /********************INDEX.EJS************************/
 /****************************************************/
-h1.index {
+/* h1.index {
     display: flex;
     justify-content: space-evenly;
     width: 100%;
     background-color: #EFEDF0;
     padding: 1rem;
     align-items: center;
-    
+    font-size: 30pt;
+    text-shadow: 3px 3px 2px #fff;
+} */
+
+header {
+    margin-bottom: 2em;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1em 3em;
+    background: #EFEDF0;
+    border-radius: 1em;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
 }
 
+header ul {
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+header li {
+    font-weight: 700;
+    margin-left: 1em;
+    text-transform: uppercase;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 2em 0;
+}
+
+li {
+    margin: 1em 0;
+}
+/* 
 a.index {
     display: flex;
     align-items: center;
@@ -81,13 +116,7 @@ a.index {
     text-decoration: none;
     color: #000;
     font-weight: bold;
-}
-
-
-h1.index {
-    font-size: 30pt;
-    text-shadow: 3px 3px 2px #fff;
-}
+} */
 
 body.index {
     background-image: url("https://i.imgur.com/Q7Fit8I.jpg");
