@@ -2,13 +2,7 @@
 <html lang="en">
     <%- include('./partials/head.ejs') %>
 <body class="new">
-    <header>
-        <h1>Plant Manager</h1>
-        <ul>
-            <li><a href="/plants/manager">Back to the Manager</a></li>
-            <li><a href="/plants/propagate" class="index">Add a New Plant</a></li>
-        </ul>
-    </header>
+    <%- include('./partials/header.ejs') %>
     <h1 class="show"><%= plant.name %></h1>
     <div class="new">
     <div class="new-plant">
