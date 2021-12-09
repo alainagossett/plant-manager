@@ -53,7 +53,6 @@ h1.land {
     position: absolute;
     top: 50%;
     transform: translate(0, -50%);
-    flex-grow: 1;
 }
 
 main.land {
