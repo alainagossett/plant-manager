@@ -1,3 +1,6 @@
+/****************************************************/
+/******************** GENERAL ************************/
+/****************************************************/
 * {
     margin: 0;
     padding: 0;
@@ -50,6 +53,7 @@ h1.land {
     position: absolute;
     top: 50%;
     transform: translate(0, -50%);
+    flex-grow: 1;
 }
 
 main.land {
@@ -132,11 +136,12 @@ div.index {
     width: 250px;
     display: flex;
     flex-wrap: wrap;
-    margin: .3rem;
+    margin: .4rem;
     align-items: center;
     justify-content: center;
     border-radius: 5px;
     border: 2px solid #fff;
+    padding: 10px;
 }
 
 img.index {
@@ -148,8 +153,9 @@ img.index {
     font-weight: bold;
 }
 
+
 /****************************************************/
-/******************** NEW.EJS ************************/
+/******************** NEW/EDIT.EJS ************************/
 /****************************************************/
 body.new {
     background-image: url("https://i.imgur.com/GBpUyDz.jpg");
@@ -160,6 +166,7 @@ body.new {
 
 div.new {
     display: flex;
+    flex-grow: 1;
     justify-content: center;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 14pt;
@@ -207,6 +214,7 @@ body.show {
 }
 
 div.show {
+    flex-grow: 1;
     justify-content: center;
 }
 
@@ -233,3 +241,14 @@ h1.show {
     margin: 50px;
 }
 
+/* ================ */
+/*     FOOTER       */
+/* ================ */
+footer {
+    margin-top: 2em;
+    font-weight: bold;
+    font-size: 0.9em;
+    letter-spacing: 0.1em;
+    text-align: center;
+    padding-bottom: 10px;
+  }
