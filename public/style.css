@@ -185,17 +185,25 @@ div.new-plant {
     justify-content: center;
     align-items: center;
     line-height: 1;
-    background-color: #EFEDF0;
+    background-color: #fff;
     height: 300px;
-    width: 400px;
-    border-radius: 10px;
-
+    border-radius: 5px;
 }
 
 input {
     float: right;
     margin: 10px 0px 2px 20px;
 }
+
+.custom-file-input::before {
+    content: 'upload';
+    padding-left: 150px;
+}
+
+input[type='file'] {
+    color: transparent;
+  }
+
 
 .add-btn {
     align-items: center;

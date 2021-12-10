@@ -13,15 +13,16 @@
     <h1 class="show">Add a New Plant</h1>
     <div class="new">
         <div class="new-plant">
-            <form action="/plants" method="POST">
+            <form action="/plants" method="POST" enctype="multipart/form-data">
                 <table>
                     <tr>
                         <td>Name:</td>
                         <td><input type="text" name="name" /></td>
                     </tr>
                     <tr>
-                        <td>Image:</td>
-                        <td><input type="text" name="img" /></td>
+                        <td>Paste an image or upload:</td>
+                        <td><input type="file" name="uplImage" class="custom-file-input"/><br/>
+                        <input type="text" name="img" /></td>
                     </tr>
                     <tr>
                         <td>Description:</td>
