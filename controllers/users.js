@@ -7,3 +7,4 @@ const SALT_ROUNDS = 10;
 usersRouter.get('/login', (req, res) => {
     res.render('login.ejs', {err: ''});
 });
+
