@@ -10,11 +10,18 @@
             <li>Log In</li>
         </ul>
     </header>
+    
     <main class="index">
         <% plants.forEach(plant => { %>
         <div class="index">
             <p class="index-name"><%= plant.name %></p>
-            <a href="/plants/<%= plant.id %>"><img src="<%= plant.img %>" class="index" /></a>
+            <a href="/plants/<%= plant.id %>">
+                <% if(plant.uplImage) { %>
+                    <img class="index" src="<%= plant.uplImage %>" alt="<%= plant.name %>" />
+               <% } else { %>
+                <img src="<%= plant.img %>" class="index" alt="<%= plant.name %>"/>
+               <% } %>
+                </a>
           
             <a href="/plants/<%= plant._id %>/edit" class="btn">Edit</a>
             <form action="/plants/<%=plant.id %>?_method=DELETE" method="POST">
