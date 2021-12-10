@@ -7,7 +7,11 @@
     <div class="show">
         <h1 class="show"><%= plant.name %></h1>
         <div class="plant-page">
-            <img class="plant-img" src="<%= plant.img %>" />
+            <% if(plant.uplImage) { %>
+                <img class="plant-img" src="<%= plant.uplImage %>" alt="<%= plant.name %>" />
+           <% } else { %>
+            <img class="plant-img" src="<%= plant.img %>" alt="<%= plant.name %>"/>
+           <% } %>
             <div class="plant-det">
                 <p><strong>Description:</strong> <%= plant.description %></p>
                 <p><strong>Sunlight:</strong> <%= plant.sunlight %></p>

@@ -10,6 +10,7 @@ const plantSchema = new Schema({
     description: String,
     sunlight: String,
     water: String,
+    uplImage: String,
     problems: String
 }, { timestamps: true });
 

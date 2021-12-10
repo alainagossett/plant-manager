@@ -4,17 +4,19 @@ const plantsRouter = express.Router();
 
 const Plant = require('../models/plant');
 
+const cloudinary = require('cloudinary').v2;
+
 //Define Routes
 plantsRouter.get('/', (req, res) => {
     res.send("Hello World");
-})
+});
 
 //Landing Page
 plantsRouter.get('/plants/root', (req, res) => {
     res.render('land.ejs', {
         tabTitle: 'Plant Manager Home',
     });
-})
+});
 
 //Seed Route
 plantsRouter.get('/plants/seed', async (req, res) => {
@@ -45,7 +47,7 @@ plantsRouter.get('/plants/seed', async (req, res) => {
     ];
     await Plant.create(data)
     res.redirect('/plants/root');
-})
+});
 
 //Index Route
 plantsRouter.get('/plants/manager', (req, res) => {
@@ -53,23 +55,23 @@ plantsRouter.get('/plants/manager', (req, res) => {
         res.render('index.ejs', {
             plants,
             tabTitle: 'Plant Manager',
-        })
-    })
-})
+        });
+    });
+});
 
 //New Route
 plantsRouter.get('/plants/propagate', (req, res) => {
     res.render('new.ejs', {
         tabTitle: 'New Plant Page',
-    })
-})
+    });
+});
 
 //Delete Route
 plantsRouter.delete('/plants/:id', (req, res) => {
     Plant.findByIdAndDelete(req.params.id, (err, data) => {
         res.redirect('/plants/manager');
-    })
-})
+    });
+});
 
 //Update Route
 plantsRouter.put('/plants/:id', (req, res) => {
@@ -78,16 +80,20 @@ plantsRouter.put('/plants/:id', (req, res) => {
         { new: true },
         (err, updatedPlant) => {
             res.redirect(`/plants/${req.params.id}`)
-        }
-    )
-})
+        });
+});
 
 //Create Route
 plantsRouter.post('/plants', (req, res) => {
-    Plant.create(req.body, (err, createdPlant) => {
-        res.redirect('/plants/manager')
-    })
-})
+    const photo = req.files.uplImage;
+    photo.mv(`./uploads/${photo.name}`);
+    cloudinary.uploader.upload(`./uploads/${photo.name}`).then(result => {
+        req.body.uplImage = result.secure_url;
+        Plant.create(req.body, (err, createdPlant) => {
+            res.redirect('/plants/manager')
+        });
+    }).catch(error => console.log(error));
+});
 
 //Edit Route
 plantsRouter.get('/plants/:id/edit', (req, res) => {
@@ -95,9 +101,9 @@ plantsRouter.get('/plants/:id/edit', (req, res) => {
         res.render('edit.ejs', {
             plant,
             tabTitle: 'Edit Plant Page',
-        })
-    })
-})
+        });
+    });
+});
 
 //Show Route
 plantsRouter.get('/plants/:id', (req, res) => {
@@ -105,8 +111,8 @@ plantsRouter.get('/plants/:id', (req, res) => {
         res.render('show.ejs', {
             plant,
             tabTitle: 'Show Plant Page',
-        })
-    })
-})
+        });
+    });
+});
 
 module.exports = plantsRouter;
