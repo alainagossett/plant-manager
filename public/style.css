@@ -213,10 +213,6 @@ td {
     padding-left: 15px;
 }
 
-form.new {
-    width: 75vw;
-}
-
 
 .add-btn {
     align-items: center;
@@ -266,6 +262,7 @@ h1.show {
     max-width: 500px;
     margin: 50px;
     background-color: #fff;
+    padding: 10px;
 }
 
 .options {
