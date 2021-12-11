@@ -130,7 +130,7 @@ li a:hover {
 /****************************************************/
 body.index {
     background-image: url("https://i.imgur.com/Q7Fit8I.jpg");
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat; */
     background-position: center;
     background-size: cover;
     background-color: #4bb6a8;
@@ -196,18 +196,27 @@ div.new-plant {
 }
 
 input {
-    float: right;
     margin: 10px 0px 2px 20px;
+    width: 250px;
 }
 
-.custom-file-input::before {
-    content: 'upload';
-    padding-left: 150px;
+table, tbody {
+    width: 100%;
 }
 
-input[type='file'] {
-    color: transparent;
-  }
+tr {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+td {
+    padding-left: 15px;
+}
+
+form.new {
+    width: 75vw;
+}
 
 
 .add-btn {
@@ -215,6 +224,10 @@ input[type='file'] {
     justify-content: center;
     margin-top: 50px;
     width: 100px;
+}
+
+.new-btn {
+    margin-right: 4rem;
 }
 
 /****************************************************/

@@ -7,6 +7,7 @@ Are you an avid houseplant collector? Do you find it difficult sometimes to reme
 - CSS3
 - JavaScript
 - NodeJS
+- jQuery
 - Mongoose
 - MongoDB
 - EJS
@@ -26,7 +27,6 @@ Are you an avid houseplant collector? Do you find it difficult sometimes to reme
 2. If you want to add 4 pre-populated plants, click the Seed button
 
 ## Next Steps
-- Add photo upload functionality to add your own plant photos
 - Add basic authorization and limit the index and beyond to only logged in users
 - Add a watering schedule countdown
 

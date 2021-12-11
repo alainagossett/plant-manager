@@ -15,7 +15,6 @@ plantsRouter.get('/', (req, res) => {
 plantsRouter.get('/plants/root', (req, res) => {
     res.render('land.ejs', {
         tabTitle: 'Plant Manager Home',
-        currentLink: true,
     });
 });
 
@@ -47,7 +46,7 @@ plantsRouter.get('/plants/seed', async (req, res) => {
         },
     ];
     await Plant.create(data)
-    res.redirect('/plants/root');
+    res.redirect('/plants/manager');
 });
 
 //Index Route
@@ -85,9 +84,9 @@ plantsRouter.put('/plants/:id', (req, res) => {
 });
 
 //Create Route
-plantsRouter.post('/plants', (req, res) => {
+plantsRouter.post('/plants', async (req, res) => {
     const photo = req.files.uplImage;
-    photo.mv(`./uploads/${photo.name}`);
+    await photo.mv(`./uploads/${photo.name}`);
     cloudinary.uploader.upload(`./uploads/${photo.name}`).then(result => {
         req.body.uplImage = result.secure_url;
         Plant.create(req.body, (err, createdPlant) => {

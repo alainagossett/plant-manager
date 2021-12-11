@@ -7,17 +7,18 @@
     <h1 class="show">Add a New Plant</h1>
     <div class="new">
         <div class="new-plant">
-            <form action="/plants" method="POST" enctype="multipart/form-data">
+            <form action="/plants" method="POST" enctype="multipart/form-data" class="new">
                 <table>
                     <tr>
                         <td>Name:</td>
                         <td><input type="text" name="name" placeholder="Name"/></td>
                     </tr>
                     <tr>
-                        <td>Paste an image or upload:</td>
-                        <td><input type="file" name="uplImage" class="custom-file-input"/><br/>
+                        <td>Upload an Image:</td>
+                        <td><input type="file" name="uplImage" class="custom-file-input"/>
                             <!-- TODO: add an indicator that an image has been added -->
-                        <input type="text" name="img" placeholder="Image URL"/></td>
+                        <!-- <input type="text" name="img" placeholder="Image URL"/> -->
+                    </td>
                     </tr>
                     <tr>
                         <td>Description:</td>
@@ -35,8 +36,12 @@
                         <td>Common Problems:</td>
                         <td><input type="text" name="problems" placeholder="Problems"/> </td>
                     </tr>
+                    <tr>
+                        <td>&#160;</td>
+                        <td> <input type="submit" value="Add Plant" class="btn new-btn" /></td>
+                    </tr>
                 </table>
-                <input type="submit" value="Add Plant" class="btn" />
+               
             </form>
         </div>
     </div>
