@@ -16,9 +16,9 @@ Are you an avid houseplant collector? Do you find it difficult sometimes to reme
 
 ## Project Planning
 ### Wireframes
-[Landing Page](https://i.imgur.com/iY7EGjw.png)  
-[Index Page](https://i.imgur.com/YHOrKVA.png)  
-[Show Page](https://i.imgur.com/FoOTxFz.png)  
+![Landing Page](https://i.imgur.com/iY7EGjw.png)  
+![Index Page](https://i.imgur.com/YHOrKVA.png)  
+![Show Page](https://i.imgur.com/FoOTxFz.png)  
 
 Trello Board: [Trello](https://trello.com/b/O6hTaB6c/plant-manager)  
 
