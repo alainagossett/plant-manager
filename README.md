@@ -14,15 +14,21 @@ Are you an avid houseplant collector? Do you find it difficult sometimes to reme
 - REST
 
 ## Screenshots
+### Deployed App
+[deployed image1]()  
+[deployed image2]()  
+[deployed image3]()
+
+## Project Planning
 ### Wireframes
 [wireframe image1]()  
 [wireframe image2]()  
 [wireframe image3]()
 
-### Deployed App
+PASTE TRELLO BOARD LINK
 
 ## Getting Started
-[Click Here]() to go to the app
+[Click Here](https://plant-manager-seirphx.herokuapp.com/plants/root) to go to the app
 1. Click Get Started to be taken to the index page
 2. If you want to add 4 pre-populated plants, click the Seed button
 
