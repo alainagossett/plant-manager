@@ -1,3 +1,9 @@
+<style>
+    a.current {
+    text-decoration: underline !important;
+}
+</style>
+
 <header>
     <h1>Plant Manager</h1>
     <ul>
@@ -7,4 +13,15 @@
     </ul>
 </header>
 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
+</script>
+<script>
+    $(function(){
+        $('a').each(function() {
+            if ($(this).prop('href') == window.location.href) {
+                $(this).addClass('current');
+            }
+        });
+    });
+</script>
 <!-- TODO: Add conditional logic for current page -->

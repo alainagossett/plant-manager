@@ -15,6 +15,7 @@ plantsRouter.get('/', (req, res) => {
 plantsRouter.get('/plants/root', (req, res) => {
     res.render('land.ejs', {
         tabTitle: 'Plant Manager Home',
+        currentLink: true,
     });
 });
 
