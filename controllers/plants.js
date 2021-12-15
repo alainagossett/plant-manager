@@ -79,23 +79,24 @@ plantsRouter.put('/plants/:id', async (req, res) => {
     let id = req.body.uplImage2.substring(62, 82);
     // console.log(id);
     cloudinary.uploader
-    //destroy existing image by id
-    .destroy(id)
-    .then(async () => {
-        //reupload new image
-        const photo = req.files.uplImage;
-        await photo.mv(`./uploads/${photo.name}`);
-        cloudinary.uploader.upload(`./uploads/${photo.name}`).then(result => {
-            req.body.uplImage = result.secure_url;
-            Plant.findByIdAndUpdate (
-                //re-add plant data
-                req.params.id, req.body,
-                { new: true },
-                (err, updatedPlant) => {
-                    res.redirect(`/plants/${req.params.id}`)
-                });
-        }).catch(error => console.log(error));
-});
+        //destroy existing image by id
+        .destroy(id)
+        .then(async () => {
+            //reupload new image
+            const photo = req.files.uplImage;
+            await photo.mv(`./uploads/${photo.name}`);
+            cloudinary.uploader.upload(`./uploads/${photo.name}`).then(result => {
+                req.body.uplImage = result.secure_url;
+                Plant.findByIdAndUpdate(
+                    //re-add plant data
+                    req.params.id, req.body, {
+                        new: true
+                    },
+                    (err, updatedPlant) => {
+                        res.redirect(`/plants/${req.params.id}`)
+                    });
+            }).catch(error => console.log(error));
+        });
 });
 
 //Create Route
