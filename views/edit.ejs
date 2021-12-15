@@ -7,7 +7,7 @@
     <h1 class="show"><%= plant.name %></h1>
     <div class="new">
         <div class="new-plant">
-            <form action="/plants/<%= plant._id %>?_method=PUT" method="POST">
+            <form action="/plants/<%= plant._id %>?_method=PUT" method="POST" enctype="multipart/form-data">
                 <table>
                     <tr>
                         <td>Name:</td>
@@ -15,7 +15,9 @@
                     </tr>
                     <tr>
                         <td>Image:</td>
-                        <td><input type="text" name="img" value="<%= plant.img %>" /></td>
+                        <td><input type="file" name="uplImage" class="custom-file-input" required/>
+                        <input type="text" name="uplImage2" value="<%= plant.uplImage %>" hidden />
+                       </td>
                     </tr>
                     <tr>
                         <td>Description:</td>
