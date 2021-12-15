@@ -38,6 +38,3 @@ Trello Board: [Trello](https://trello.com/b/O6hTaB6c/plant-manager)
 - Add basic authorization and limit the index and beyond to only logged in users
 - Add a watering schedule countdown
 
-## Future Improvements
-- Add functionality to override the existing image with a new uploaded image
-
